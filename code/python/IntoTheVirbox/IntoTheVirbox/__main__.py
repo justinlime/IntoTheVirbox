@@ -5,6 +5,14 @@ import os
 rooms = WorldGenerator(seed="virbox").genRooms()
 player =  Player(rooms[0])
 
+os.system("clear")
+if os.name != "posix":
+    print("\nWindows User detected, You die instantly")
+    print("\nGame Over\n")
+    exit()
+
+
+
 while True:
     troll = input("\nVim, or Emacs? (Determines Keybindings)> ")
     if troll.lower() == "vim":
